@@ -1,0 +1,267 @@
+@media (max-width: 750px) 
+{
+
+        /* ====================================BURGER================================= */
+
+    .ham {
+        display: block;
+        position: fixed;
+        /* always keep ham on top of everything */
+        z-index: 1000;
+        top: 20px;
+        right: 20px;
+        width: 36px;
+        height: 36px;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(33, 60, 95);
+        border-radius: 1em;
+        /* show the menu image */
+        background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+        background-size: 100%;
+    }
+    
+    .showClose {
+        background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #000;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        color: white;
+        /* hide the menu above the screen by default */
+        transform: translateY(-100%);
+        /* transition adds a little animation when sliding in and out the menu */
+        transition: transform 0.2s ease;
+    }
+    
+    .menuLink {
+        color: white;
+        border-bottom: 2px solid rgb(33, 60, 95);
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1 em;
+    }
+    
+    .menuLink:hover, .menuLink:focus {
+        border-bottom: 2px solid white;
+    }
+    .showNav {
+        /* show the menu */
+        transform: translateY(0);
+    }
+    
+    html
+    {
+        width: 95vw;
+    }
+
+    .container
+    {
+        width: 95vw;
+    }
+
+    /* ====================================LEFT================================= */
+    .container--left
+    {
+        height: 100vh;
+        box-shadow:11px 0px 13px 0px rgb(33, 60, 95) ;
+    }
+    .container--left-nav-img > img
+    {
+        filter: grayscale(100%);
+        width: 8em;
+        margin: 0 auto;
+    }
+    .container--left-nav-img
+    {
+        margin-bottom: 1em;
+    }
+    /* ====================================RIGTH================================= */
+    .container--rigth
+    {
+        width: 100vw;
+        margin-left: 0;
+    }
+    .container--rigth-main > div
+    {
+        max-height: fit-content;
+        margin-top: 2em;
+        padding: 1em 0.5em;
+    }
+    
+    .container--rigth-main_experience_flex
+    {
+        flex-flow: column nowrap;
+        margin-top: 0;
+    }
+    .container--rigth-main_experience_flex_active
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        grid-auto-rows: minmax(4em, auto);
+        
+    }
+    
+    .container--rigth-main_experience_flex_active > div
+    {
+        width: 8em;
+        height: 7em;
+    }
+    .pompier 
+    {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        
+    }
+    .mcdo 
+    {
+        grid-column: 2 / 2;
+        grid-row: 1;
+    }
+    .marine 
+    {
+        grid-column: 1 / 2;
+        grid-row: 2;
+        margin-bottom: 2em;
+    }
+    .indigo 
+    {
+        grid-column: 2 / 2;
+        grid-row: 2;
+    }
+
+    .main_experience_div
+    {
+        width: 15em;
+        height: 10em;
+        margin: 1em auto;
+    }
+    
+    .display_experience
+    {
+        padding-bottom: 1em;
+    }
+
+    .display_experience> div
+    {
+        margin-left: 0;
+    }
+    
+    #competence
+    {
+        bottom: 3em;
+    }
+    
+    .container--rigth-main_presentation
+    {
+    font-size: 1em;
+    }
+
+    .transparent_project
+    {
+        display: block;
+    }
+}
+
+
+@media (min-width: 751px) and (max-width: 1150px) 
+{
+    /* ====================================LEFT================================= */
+    .container--left
+    {
+        width: 15em ;
+    }
+
+    /* ====================================RIGTH================================= */
+    .container--rigth
+    {
+        /* width: 100vw; */
+        margin-left:15em;
+    }
+
+    .container--rigth-main_experience_flex
+    {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        grid-auto-rows: min-content;
+        
+    }
+    
+    .container--rigth-main_experience_flex > div
+    {
+        width: 15em;
+        height: 15em;
+    }
+
+    .container--rigth-main_experience_flex_active
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        grid-auto-rows: minmax(4em, auto);
+        
+    }
+    
+    .container--rigth-main_experience_flex_active > div
+    {
+        width: 8em;
+        height: 7em;
+    }
+
+    .pompier 
+    {
+        grid-column: 1 / 2;
+        grid-row: 1;       
+    }
+    .mcdo 
+    {
+        grid-column: 2 / 2;
+        grid-row: 1;
+    }
+    .marine 
+    {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+    .indigo 
+    {
+        grid-column: 2 / 2;
+        grid-row: 2;
+    }
+
+    .pompier,
+    .marine
+    {
+        margin-right: 0em;
+    }
+
+    .indigo,
+    .mcdo
+    {
+        margin-left: 0em;   
+    }
+
+    .display_experience
+    {
+        width: 100%;
+    }
+    .display_experience > div
+    {
+        width: 80%;
+        margin: 1.5em auto;
+        padding-bottom: 1.5em;
+    }
+
+
+
+
+}

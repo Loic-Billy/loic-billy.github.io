@@ -1,0 +1,498 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#FFF;
+    font-family: 'Lemonada', cursive;
+
+}
+
+html
+{
+    background-color:rgb(34, 34, 34) ;
+}
+a
+{
+    text-decoration: none;
+}
+
+h3
+{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+h4
+{
+    font-size: 2em;
+    width: fit-content;
+    margin: 1em auto;
+    text-decoration: underline;
+}
+h5
+{
+    font-size: 1.5em;
+    margin: 1em 0
+}
+h1
+{
+border-bottom: 0.2em solid rgb(33, 60, 95);
+}
+span,
+em
+{
+    display: block;
+}
+li
+{
+    list-style: none;
+}
+.dev
+{
+    font-style: italic;
+    font-size: 1em;
+}
+
+.ham
+{
+    display: none;
+}
+#about-me
+{
+    margin-bottom: 1em;
+}
+
+#experience,
+#project,
+#competence
+{
+    position: relative;
+    bottom:2em;
+    width: fit-content;
+    margin:0 auto;
+    padding:0.5em;
+    border:1px outset rgb(33, 60, 95);
+    border-radius: 0.5em;
+}
+#experience,
+#project
+{
+    background-color: #282c34;
+}
+#competence
+{
+    background-color: rgb(34, 34, 34);
+
+}
+
+/* ======================================== pool code which are from different parts ================================= */
+h4,
+#experience,
+#project,
+#competence,
+.container--left-nav-img,
+.container--left-nav-list > a,
+.container--left-footer,
+.transparent_experience,
+.competence_icon,
+.transparent_project > ul,
+.transparent_project > h5,
+.enDev
+{
+    text-align:center;
+}
+
+.container--left,
+.container--left-footer-reseau > div,
+.container--rigth-main_presentation,
+.main_competence,
+.container--rigth-main_experience_flex_active
+{
+    display: flex;
+}
+
+.main_project_div,
+.main_experience_div,
+.transparent_project
+{
+    width: 20em;
+    height: 15em;
+    margin: 0 auto;
+    border-radius: 1em;
+    background-size:cover;
+    background-position: center;
+}
+
+.container--rigth-main_experience,
+.container--rigth-main_project
+{
+    background-color: #282c34;
+    border:0.1em solid rgb(33, 60, 95);
+}
+
+.hidden,
+.transparent_project,
+.transparent_experience
+{
+    display: none;
+}
+
+.transparent_project,
+.transparent_experience
+{
+-webkit-transform-origin: 50% 0%;
+      -ms-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;    
+    -webkit-animation: in-top 1s ease 0ms 1 forwards;
+          animation: in-top 1s ease 0ms 1 forwards;
+}
+
+
+/* ===========================left part of the screen================================ */
+.container--left
+{
+    z-index: 1;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 15vw;
+    height: 100vh;
+    box-shadow:11px 0px 13px 0px rgb(33, 60, 95) ;
+}
+
+.container--left-nav-img
+{
+    width: 60%;
+    margin: 2em auto;
+}
+/* .container--left-nav-img > img
+{
+    
+} */
+.container--left-nav-img-profil
+{
+    width: 100%;
+    clip-path:ellipse(45% 45%);
+}
+
+.container--left-nav-list
+{
+    display : flex;
+    flex-direction: column;
+}
+.container--left-nav-list > a
+{
+    text-decoration: none;
+    margin-top: 0.5em;
+    padding: 0.5em;
+}
+.container--left-nav-list > a:hover
+{
+    transition: background-color 0.6s linear;
+    background-color:rgb(33, 60, 95);
+}
+.container--left-footer
+{
+    margin-bottom: 1em;
+}
+.container--left-footer-reseau > div
+{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+/* ===========================Rigth part of the screen================================ */
+
+.container--rigth
+{
+    margin-left: 15vw;
+}
+
+.container--rigth-main
+{
+    width: 100%;
+}
+
+
+.container--rigth-main > div
+{
+    max-height: fit-content;
+    min-height: 80vh;
+    width: 100%;
+    padding:0 1em;
+}
+
+.container--rigth-main_presentation
+{
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.6em;
+}
+
+
+/*=========================================== EXPERIENCE =====================================*/
+
+.container--rigth-main_experience_flex
+{
+    display:flex;
+    flex-flow: row nowrap;
+    margin-top: calc(40vh - 224px);
+    justify-content: space-between;
+}
+
+
+.main_experience_div
+{
+    margin:0 auto;
+}
+
+.container--rigth-main_experience_flex_active
+{
+    transition: 1s linear;
+    width: fit-content;
+    margin: auto;
+    border-bottom: 1em solid rgb(33, 60, 95);
+}
+.container--rigth-main_experience_flex_active > div
+{
+    width: 12em;
+    height: 11em;
+    margin: 1em 0.5em;
+    border-radius: 1em;
+}
+
+
+.marine,
+.indigo
+{
+    color:#000;
+    background-color: #FFF;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pompier 
+{
+    background-image: url(/../images/pompier.jpg);
+
+}
+.mcdo 
+{
+    background-image: url(/../images/mcdo.jpg);
+
+}
+.indigo 
+{
+    background-image: url(/../images/indigo.png);
+
+}
+.marine 
+{
+    background-image: url(/../images/Marine_Nationale.svg.png);
+}
+.display_experience
+{
+    width: 80vw;
+}
+.display_experience > div
+{
+    margin-left: 5em;
+}
+
+h5,
+.display_experience_ul
+{
+    position: relative;
+    left:2em;
+}
+
+.display_experience_ul > li
+{
+    margin: 0.4em 0;
+}
+
+.main_experience_div:hover .transparent_experience {
+    display: block;
+   
+}
+
+.transparent_experience
+{
+
+    height: 100%;
+    border-radius: 1em;
+    padding-top: calc(40% - 1em);
+    background-color: rgba(10, 87, 187, 0.719);    
+}
+
+.container--rigth-main_experience_flex_active > div > .transparent_experience
+{
+    padding-top: calc(50% - 1em);
+}
+
+ /* ============================COMPETENCE============================ */
+
+ .main_competence
+{
+    justify-content: flex-start;
+}
+.main_competence > div
+{
+    margin: 2em 1em;
+}
+.competence_icon
+{
+    width: 4.5em;
+    align-self: center;
+}
+.competence_list
+{
+    padding-left: 1em;
+    border-left: 1px solid #FFF;
+    align-self: center;
+}
+
+/* ===================================Project================================= */
+.main_project_div
+{
+    margin:2em auto;
+}
+
+.portfolio,
+.escapeoroom
+{
+    border: 0.1em solid rgb(33, 60, 95);
+}
+.escapeoroom
+{
+    background-image: url(/../images/Escape.gif);
+}
+.portfolio
+{
+    background-image: url(/../images/monportfolio.PNG);
+}
+
+.transparent_project > ul > li
+{
+    font-size: 1.6em;
+    margin: 0.5em;
+}
+.transparent_project > h5
+{
+    position:initial ;
+    margin:1em 0;
+}
+.transparent_project
+{
+    position: relative;
+    bottom: 1.6em;
+    right: 0.1em;
+    background-color: rgba(10, 87, 187, 0.719);
+    
+}
+.enDev
+{
+    font-size: 2em;
+    margin-top: 2em;
+}
+
+.technoTitle
+{
+    text-decoration: underline;
+    font-size: 1.2em;
+
+}
+.main_project_div:hover
+{
+    animation: borderColors 1s forwards ease-in-out;
+}
+
+ .main_project_div:hover .transparent_project {
+    display: block;
+   
+} 
+  
+  @keyframes in-top {
+    from {
+      -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+              transform: rotate3d(-1, 0, 0, 90deg);
+    }
+    to {
+      -webkit-transform: rotate3d(0, 0, 0, 0deg);
+              transform: rotate3d(0, 0, 0, 0deg);
+    }
+  }
+  
+  
+
+/* ================================modif scrollbar=========================== */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(33, 60, 95);
+    border: 31px none rgb(33, 60, 95);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(13, 50, 99);
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgb(13, 50, 99);
+}
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track:hover {
+    background: #f2f2f2;
+}
+::-webkit-scrollbar-track:active {
+    background: #f5f5f5;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* border */
+
+
+  
+  @keyframes borderColors {
+      0% {
+        border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    33% {
+
+      border-top-color: #fff;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+  
+    }
+    66% {
+
+
+      border-top-color: #fff;
+      border-right-color: #fff;
+      border-bottom-color: transparent;
+      border-left-color: #fff;
+    }
+    100% {
+
+      border-top-color: #fff;
+      border-right-color: #fff;
+      border-bottom-color: #fff;
+      border-left-color: #fff;
+    }
+  }
+ 
