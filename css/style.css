@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     color:#FFF;
-    font-family: 'Lemonada', cursive;
+    font-family: 'Mali',  Arial, Helvetica, sans-serif;
 
 }
 
@@ -15,6 +15,11 @@ html
 a
 {
     text-decoration: none;
+}
+
+strong
+{
+    font-weight: initial;
 }
 
 h3
@@ -165,10 +170,7 @@ h4,
     width: 60%;
     margin: 2em auto;
 }
-/* .container--left-nav-img > img
-{
-    
-} */
+
 .container--left-nav-img-profil
 {
     width: 100%;
@@ -318,7 +320,7 @@ h5,
 
 .transparent_experience
 {
-
+    font-family: 'Press Start 2P';
     height: 100%;
     border-radius: 1em;
     padding-top: calc(40% - 1em);
@@ -389,6 +391,10 @@ h5,
     right: 0.1em;
     background-color: rgba(10, 87, 187, 0.719);
     
+}
+.transparent_project :nth-child(1n)
+{
+    font-weight: bold;
 }
 .enDev
 {

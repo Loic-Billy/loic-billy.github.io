@@ -5,20 +5,26 @@ const app = {
 
         //on selectionne toutes les div main_experience_div pour y placer un ecouteur d'évènement click
         let  allExperienceDiv = document.querySelectorAll(".main_experience_div");
-        let ham = document.querySelector(".ham")
-        ham.addEventListener("click", app.toggleHamburger)
-
-        var menuLinks = document.querySelectorAll(".menuLink")
-        menuLinks.forEach( 
-        function(menuLink) { 
-        menuLink.addEventListener("click", app.toggleHamburger) 
-        }
-        )
+        
+        app.burgerMenu();
         for (let i = 0; i < allExperienceDiv.length; i++) {
             let experienceDiv = allExperienceDiv[i];
 
             app.bindCurrentTask(experienceDiv);
         }
+    },
+
+    burgerMenu: function()
+    {
+        let ham = document.querySelector(".ham")
+        ham.addEventListener("click", app.toggleHamburger)
+
+        var menuLinks = document.querySelectorAll(".menuLink")
+        menuLinks.forEach( 
+            function(menuLink) { 
+            menuLink.addEventListener("click", app.toggleHamburger) 
+            }
+        )
     },
 
     toggleHamburger: function (){
@@ -52,7 +58,7 @@ const app = {
             {
             parentClasse.className = "container--rigth-main_experience_flex";
             parentClasse.className.transitionDelay = "1s";
-            currentDiv.firstElementChild.innerHTML = "Click for check";
+            currentDiv.firstElementChild.innerHTML = "Découvrir";
             console.log(currentDiv.firstElementChild);
             app.lastDiv = null;
             app.resetHiddenInfo();
@@ -122,9 +128,9 @@ const app = {
          let  allExperienceDiv = document.querySelectorAll(".main_experience_div");
          for (let i = 0; i < allExperienceDiv.length; i++) {
              let experienceDiv = allExperienceDiv[i];
-            experienceDiv.firstElementChild.innerHTML = "Click for check";;
+            experienceDiv.firstElementChild.innerHTML = "Découvrir";;
             }
-        currentDiv.firstElementChild.innerHTML = "Close";
+        currentDiv.firstElementChild.innerHTML = "Retour";
      }
 
 

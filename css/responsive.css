@@ -163,9 +163,15 @@
     {
     font-size: 1em;
     }
-
+    .transparent_experience,
+    .transparent_project :nth-child(1n)
+    {
+        color:rgb(10, 87, 187);
+    }
+    .transparent_experience,
     .transparent_project
     {
+        background-color: rgba(255, 255, 255, 0.445);
         display: block;
     }
 }
