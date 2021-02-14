@@ -94,7 +94,7 @@
         margin-top: 2em;
         padding: 1em 0.5em;
     }
-    
+
     .container--rigth-main_experience_flex
     {
         flex-flow: column nowrap;
@@ -196,6 +196,12 @@
         /* width: 100vw; */
         margin-left:15em;
     }
+
+    .cv-div
+{
+    margin-bottom: 1.5em ;
+}
+
 
     .container--rigth-main_experience_flex
     {

@@ -90,7 +90,7 @@ li
 
 }
 
-/* ======================================== pool code which are from different parts ================================= */
+/* ======================================== assemble code which are from different parts ================================= */
 h4,
 #experience,
 #project,
@@ -230,6 +230,28 @@ h4,
     flex-direction: column;
     justify-content: center;
     font-size: 1.6em;
+}
+
+.cv-div
+{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3em;
+}
+
+.cv{
+    background-color:#282c34;
+    border: 2px outset rgb(33, 60, 95);
+    border-radius: 0.5em;
+    color:rgb(32, 104, 197);
+    padding: 0.5em;
+}
+.cv:hover
+{
+    background-color: rgb(33, 60, 95);
+    border:2px solid rgb(32, 104, 197) ;
+    color:rgb(233, 233, 233);
+    transition: 1s  ;
 }
 
 
