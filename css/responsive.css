@@ -109,40 +109,53 @@
         
     }
     
-    .container--rigth-main_experience_flex_active > div
+    .container--rigth-main_experience_flex_active > li
     {
-        width: 8em;
-        height: 7em;
+        width: 10em;
+        height: 9em;
     }
-    .pompier 
+    #pompier 
     {
         grid-column: 1 / 2;
         grid-row: 1;
         
     }
-    .mcdo 
+    #mcdo 
     {
         grid-column: 2 / 2;
         grid-row: 1;
     }
-    .marine 
+    #marine 
     {
         grid-column: 1 / 2;
         grid-row: 2;
-        margin-bottom: 2em;
     }
-    .indigo 
+    #indigo 
     {
         grid-column: 2 / 2;
         grid-row: 2;
     }
 
-    .main_experience_div
+    .container--rigth-main_experience_flex  > li 
     {
-        width: 15em;
-        height: 10em;
-        margin: 1em auto;
-    }
+        width: 20em;
+        height: 15em;
+        margin:0 auto;
+        border-radius: 1em;
+       background-color: #fff;
+       background-position: center;
+     }
+    .main_experience_div
+{
+    font-family: 'Press Start 2P';
+
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.9em;
+    background-color: rgba(26, 88, 156, 0.9);
+}
     
     .display_experience
     {
@@ -182,7 +195,7 @@
 }
 
 
-@media (min-width: 751px) and (max-width: 1150px) 
+@media (min-width: 751px) and (max-width: 930px) 
 {
     /* ====================================LEFT================================= */
     .container--left
@@ -198,27 +211,15 @@
     }
 
     .cv-div
-{
-    margin-bottom: 1.5em ;
-}
-
+    {
+        margin-bottom:3em ;
+    }
 
     .container--rigth-main_experience_flex
     {
-        margin: 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 0.5em;
-        grid-auto-rows: min-content;
-        
+        flex-flow: column nowrap;
+        margin-top: 0;
     }
-    
-    .container--rigth-main_experience_flex > div
-    {
-        width: 15em;
-        height: 15em;
-    }
-
     .container--rigth-main_experience_flex_active
     {
         display: grid;
@@ -228,44 +229,29 @@
         
     }
     
-    .container--rigth-main_experience_flex_active > div
-    {
-        width: 8em;
-        height: 7em;
-    }
-
-    .pompier 
+    #pompier 
     {
         grid-column: 1 / 2;
-        grid-row: 1;       
+        grid-row: 1;
+        
     }
-    .mcdo 
+    #mcdo 
     {
         grid-column: 2 / 2;
         grid-row: 1;
     }
-    .marine 
+    #marine 
     {
         grid-column: 1 / 2;
         grid-row: 2;
     }
-    .indigo 
+    #indigo 
     {
         grid-column: 2 / 2;
         grid-row: 2;
+        margin-bottom: 4em;
     }
 
-    .pompier,
-    .marine
-    {
-        margin-right: 0em;
-    }
-
-    .indigo,
-    .mcdo
-    {
-        margin-left: 0em;   
-    }
 
     .display_experience
     {
@@ -279,6 +265,78 @@
     }
 
 
+}
 
+@media (min-width: 930px) and (max-width: 1550px) 
+{
 
+    .container--rigth-main_experience_flex
+    {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        grid-auto-rows: min-content;
+        
+    }
+    
+    .container--rigth-main_experience_flex > li
+    {
+        width: 20em;
+        height: 15em;
+    }
+
+    .container--rigth-main_experience_flex_active
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        grid-auto-rows: minmax(4em, auto);
+        
+    }
+    
+    .container--rigth-main_experience_flex_active > li
+    {
+        width: 12em;
+        height: 11em;
+    }
+
+    #pompier 
+    {
+        grid-column: 1 / 2;
+        grid-row: 1;       
+    }
+    #mcdo 
+    {
+        grid-column: 2 / 2;
+        grid-row: 1;
+    }
+    #marine 
+    {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+    #indigo 
+    {
+        grid-column: 2 / 2;
+        grid-row: 2;
+    }
+
+    #pompier,
+    #marine
+    {
+        margin-right: 0em;
+    }
+
+    #indigo,
+    #mcdo
+    {
+        margin-left: 0em;   
+    }
+    .display_experience > div
+    {
+        width: 80%;
+        margin: 1.5em auto;
+        padding-bottom: 1.5em;
+    }
 }

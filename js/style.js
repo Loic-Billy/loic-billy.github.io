@@ -2,17 +2,19 @@ const app = {
     lastDiv : " ",
 
     init: function(){
-
+    
         //on selectionne toutes les div main_experience_div pour y placer un ecouteur d'évènement click
-        let  allExperienceDiv = document.querySelectorAll(".main_experience_div");
+        let  allExperienceDiv = document.querySelectorAll(".main_experience_li");
         
         app.burgerMenu();
+        app.animationDivExperience();
         for (let i = 0; i < allExperienceDiv.length; i++) {
             let experienceDiv = allExperienceDiv[i];
 
             app.bindCurrentTask(experienceDiv);
         }
     },
+    
 
     burgerMenu: function()
     {
@@ -45,7 +47,6 @@ const app = {
     
     handleClickExperience: function(env){
         let currentDiv = env.currentTarget;
-        let regex = currentDiv.className.match(/(\w+)$/);
         let parentClasse = currentDiv.parentNode;
 
        app.changeTextExperienceTransparent(currentDiv);
@@ -70,17 +71,26 @@ const app = {
             if(parentClasse.className === "container--rigth-main_experience_flex_active" && app.lastDiv != currentDiv)
             {
                 app.lastDiv = currentDiv;
-                app.displayInfoForCurrentDiv(regex[1]);
+                app.displayInfoForCurrentDiv(currentDiv.id);
 
             }
             else 
             {
                 if(parentClasse.className === "container--rigth-main_experience_flex")
                 {
+                
                 parentClasse.className = "container--rigth-main_experience_flex_active";
                 parentClasse.className.transitionDelay = "1s";
+
+                let liActive = parentClasse.childNodes
+
+                for (let i = 0; i < liActive.length; i++) {
+                    let experienceLi = liActive[i];
+        
+                    experienceLi.className="main_experience_li";
+                }
                 app.lastDiv = currentDiv;
-                app.displayInfoForCurrentDiv(regex[1]);
+                app.displayInfoForCurrentDiv(currentDiv.id);
                 }
             }
             
@@ -126,12 +136,66 @@ const app = {
      changeTextExperienceTransparent: function(currentDiv)
      {
          let  allExperienceDiv = document.querySelectorAll(".main_experience_div");
+         
          for (let i = 0; i < allExperienceDiv.length; i++) {
              let experienceDiv = allExperienceDiv[i];
-            experienceDiv.firstElementChild.innerHTML = "Découvrir";;
+            experienceDiv.innerHTML = "Découvrir";;
             }
         currentDiv.firstElementChild.innerHTML = "Retour";
-     }
+     },
+
+     animationDivExperience: function()
+    {
+        let nodes  = document.querySelectorAll('.main_experience_li'),
+        _nodes = [].slice.call(nodes, 0);
+
+        _nodes.forEach(function (el) {
+            el.addEventListener('mouseover', function (ev) {
+                app.addClass( ev, this, 'in' );
+            }, false);
+
+            el.addEventListener('mouseout', function (ev) {
+                app.addClass( ev, this, 'out' );
+            }, false);
+        });
+    },
+
+    getDirection: function(ev, obj)
+    {
+        let w = obj.offsetWidth,
+        h = obj.offsetHeight,
+        x = (ev.pageX - obj.offsetLeft - (w / 2) * (w > h ? (h / w) : 1)),
+        y = (ev.pageY - obj.offsetTop - (h / 2) * (h > w ? (w / h) : 1)),
+        d = Math.round( Math.atan2(y, x) / 1.57079633 + 5 ) % 4;
+
+    return d;
+    },
+
+    addClass: function( ev, obj, state )
+    {
+        let divAnimation = document.querySelector('.container--rigth-main_experience_animation');
+
+        
+        let direction = app.getDirection( ev, obj ),
+        class_suffix = "";
+
+        obj.className = "";
+       
+    
+        if(divAnimation.firstElementChild.className === "container--rigth-main_experience_flex")
+        {
+            
+           switch ( direction ) {
+                case 0 : class_suffix = '-top';    break;
+                case 1 : class_suffix = '-right';  break;
+                case 2 : class_suffix = '-bottom'; break;
+                case 3 : class_suffix = '-left';   break;
+            } 
+        }
+        
+        return obj.classList.add( state + class_suffix );
+    
+    },
 
 
 }
