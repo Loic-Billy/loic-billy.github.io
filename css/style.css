@@ -7,7 +7,10 @@
     font-family: 'Mali',  Arial, Helvetica, sans-serif;
 
 }
-
+address
+{
+  font-style: normal;
+}
 html
 {
     background-color:rgb(34, 34, 34) ;
@@ -41,7 +44,7 @@ h5
 }
 h1
 {
-border-bottom: 0.2em solid rgb(33, 60, 95);
+    border-bottom: 0.2em solid rgb(33, 60, 95);
 }
 span,
 em
