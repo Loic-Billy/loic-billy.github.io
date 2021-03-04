@@ -441,15 +441,19 @@ h5,
 }
 .enDev
 {
-    font-size: 2em;
-    margin-top: 2em;
+  color : rgb(245, 9, 9);
+  margin-top: 1.5em;
 }
 
 .technoTitle
 {
     text-decoration: underline;
     font-size: 1.2em;
+}
 
+.technoTitleEscape
+{
+    font-size: 0.8em;
 }
 .main_project_div:hover
 {
