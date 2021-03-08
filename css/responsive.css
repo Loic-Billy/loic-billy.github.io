@@ -210,6 +210,8 @@
         margin-left:15em;
     }
 
+
+    
     .cv-div
     {
         margin-bottom:3em ;
@@ -269,10 +271,15 @@
 
 @media (min-width: 930px) and (max-width: 1550px) 
 {
-
+    .container--rigth-main_presentation,
     .container--rigth-main_experience_flex
     {
         margin-bottom: 4em;
+    }
+
+    .container--rigth-main_experience_flex
+    {
+        
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0.5em;
