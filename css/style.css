@@ -261,11 +261,11 @@ h4,
 /*=========================================== EXPERIENCE =====================================*/
 
 .container--rigth-main_experience_flex  {
-    width: 100%;
- display:flex;
- flex-flow: row nowrap;
- margin-top: calc(40vh - 224px);
- justify-content: space-between;
+  width: 100%;
+display:flex;
+flex-flow: row nowrap;
+margin-top: calc(40vh - 224px);
+justify-content: space-between;
 }
 
 .container--rigth-main_experience_flex  > li 
@@ -279,6 +279,9 @@ h4,
    -webkit-perspective: 360px;
            perspective: 360px;
  }
+
+
+
 
 .main_experience_div
 {
@@ -442,7 +445,7 @@ h5,
 .enDev
 {
   color : rgb(245, 9, 9);
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 
 .technoTitle
@@ -453,7 +456,7 @@ h5,
 
 .technoTitleEscape
 {
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 .main_project_div:hover
 {

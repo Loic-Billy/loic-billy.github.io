@@ -272,7 +272,7 @@
 
     .container--rigth-main_experience_flex
     {
-        margin: 0;
+        margin-bottom: 4em;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0.5em;
