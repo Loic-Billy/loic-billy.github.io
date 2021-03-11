@@ -11,10 +11,12 @@ address
 {
   font-style: normal;
 }
+
 html
 {
     background-color:rgb(34, 34, 34) ;
 }
+
 a
 {
     text-decoration: none;
@@ -30,6 +32,7 @@ h3
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
+
 h4
 {
     font-size: 2em;
@@ -37,24 +40,42 @@ h4
     margin: 1em auto;
     text-decoration: underline;
 }
+
 h5
 {
-    font-size: 1.5em;
-    margin: 1em 0
+  margin: 1em 0
 }
+
+h6,
+h5 {
+  font-size: 1.5em;
+}
+
+h6 {
+  background-color: rgb(26, 89, 156);
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  width: 100%;
+  /* position: relative;
+  bottom: 0.7em; */
+}
+
 h1
 {
     border-bottom: 0.2em solid rgb(33, 60, 95);
 }
+
 span,
 em
 {
     display: block;
 }
+
 li
 {
     list-style: none;
 }
+
 .dev
 {
     font-style: italic;
@@ -94,6 +115,7 @@ li
 }
 
 /* ======================================== assemble code which are from different parts ================================= */
+h6,
 h4,
 #experience,
 #project,
@@ -101,10 +123,7 @@ h4,
 .container--left-nav-img,
 .container--left-nav-list > a,
 .container--left-footer,
-.transparent_experience,
 .competence_icon,
-.transparent_project > ul,
-.transparent_project > h5,
 .enDev
 {
     text-align:center;
@@ -119,9 +138,7 @@ h4,
     display: flex;
 }
 
-.main_project_div,
-.main_experience_div,
-.transparent_project
+.main_experience_div
 {
     width: 20em;
     height: 15em;
@@ -138,21 +155,9 @@ h4,
     border:0.1em solid rgb(33, 60, 95);
 }
 
-.hidden,
-.transparent_project,
-.transparent_experience
+.hidden
 {
     display: none;
-}
-
-.transparent_project,
-.transparent_experience
-{
--webkit-transform-origin: 50% 0%;
-      -ms-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;    
-    -webkit-animation: in-top 1s ease 0ms 1 forwards;
-          animation: in-top 1s ease 0ms 1 forwards;
 }
 
 
@@ -280,9 +285,6 @@ justify-content: space-between;
            perspective: 360px;
  }
 
-
-
-
 .main_experience_div
 {
     font-family: 'Press Start 2P';
@@ -355,10 +357,12 @@ justify-content: space-between;
 {
    background-image: url(/../images/Marine_Nationale.svg.png);
 }
+
 .display_experience
 {
     width: 80vw;
 }
+
 .display_experience > div
 {
     margin-left: 5em;
@@ -401,86 +405,103 @@ h5,
 }
 
 /* ===================================Project================================= */
-.main_project_div
-{
-    margin:2em auto;
+
+.main_project_card {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.portfolio,
-.escapeoroom
-{
-    border: 0.1em solid rgb(33, 60, 95);
+.card_flip {
+  margin-top: 1em;
+  position: relative;
+  width: 20em;
+  height: 25em;
+  
 }
-.escapeoroom
+  .front,
+  .back {
+      display: block;
+      transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+      transition-duration: .5s;
+      transition-property: transform, opacity;
+      display: block;
+      color: white;
+      width: inherit;
+      background-size: cover!important;
+      background-position: center!important;
+      height: 100%;
+      background-color: rgb(33, 60, 95);
+      border: 1px solid rgba(26, 88, 156, 0.9);
+      border-radius: 1em;
+  }
+
+  .front {
+    transform: rotateY(0deg)
+  }
+  .back {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+  }
+  .back > p{
+    text-align: center;
+    margin:1em 1em;
+  }
+  .back > ul{
+    /* text-align: center; */
+    margin-top:0.5em;
+    margin-left: 4em;
+  }
+
+  .technoTitle {
+    margin-top:1.5em;
+  }
+
+  .card_flip:hover .front{
+    transform: rotateY(180deg);
+  }
+  .card_flip:hover .back{
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+
+  .escapeoroom
 {
     background-image: url(/../images/Escape.gif);
 }
 .portfolio
 {
     background-image: url(/../images/monportfolio.PNG);
+    background-position: left!important;
 }
 
-.transparent_project > ul > li
-{
-    font-size: 1.6em;
-    margin: 0.5em;
+.enDev{
+  text-align: center;
+  font-size: 2em;
+  color:rgb(180, 1, 1);
+  position: absolute;
+  bottom:1.2em;
 }
-.transparent_project > h5
-{
-    position:initial ;
-    margin:1em 0;
+.card-flip-button {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(26, 89, 156);
+  font-size: 1.2em;
+  background-color: #282c34;
+  border-bottom-left-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;
+  position: absolute;
+  bottom:0em;
+  height: 2em;
+  width: 100%;
 }
-.transparent_project
-{
-    position: relative;
-    bottom: 1.6em;
-    right: 0.1em;
-    background-color: rgba(10, 87, 187, 0.719);
-    
-}
-.transparent_project :nth-child(1n)
-{
-    font-weight: bold;
-}
-.enDev
-{
-  color : rgb(245, 9, 9);
-  margin-top: 1em;
-}
-
-.technoTitle
-{
-    text-decoration: underline;
-    font-size: 1.2em;
-}
-
-.technoTitleEscape
-{
-    font-size: 0.6em;
-}
-.main_project_div:hover
-{
-    animation: borderColors 1s forwards ease-in-out;
-}
-
- .main_project_div:hover .transparent_project {
-    display: block;
-   
-} 
   
-  @keyframes in-top {
-    from {
-      -webkit-transform: rotate3d(-1, 0, 0, 90deg);
-              transform: rotate3d(-1, 0, 0, 90deg);
-    }
-    to {
-      -webkit-transform: rotate3d(0, 0, 0, 0deg);
-              transform: rotate3d(0, 0, 0, 0deg);
-    }
-  }
-  
-  
-
 /* ================================modif scrollbar=========================== */
 ::-webkit-scrollbar {
     width: 5px;
@@ -515,41 +536,6 @@ h5,
 ::-webkit-scrollbar-corner {
     background: transparent;
 }
-
-/* border */
-
-  @keyframes borderColors {
-      0% {
-        border-top-color: transparent;
-      border-right-color: transparent;
-      border-bottom-color: transparent;
-      border-left-color: transparent;
-    }
-    33% {
-
-      border-top-color: #fff;
-      border-right-color: transparent;
-      border-bottom-color: transparent;
-      border-left-color: transparent;
-  
-    }
-    66% {
-
-
-      border-top-color: #fff;
-      border-right-color: #fff;
-      border-bottom-color: transparent;
-      border-left-color: #fff;
-    }
-    100% {
-
-      border-top-color: #fff;
-      border-right-color: #fff;
-      border-bottom-color: #fff;
-      border-left-color: #fff;
-    }
-  }
- 
 
 /* ================================animation div experience=========================== */
 

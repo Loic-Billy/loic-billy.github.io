@@ -1,4 +1,4 @@
-@media (max-width: 750px) 
+@media (max-width: 900px) 
 {
 
         /* ====================================BURGER================================= */
@@ -176,26 +176,10 @@
     {
     font-size: 1em;
     }
-    .transparent_experience,
-    .transparent_project :nth-child(1n)
-    {
-        color:rgb(10, 87, 187);
-    }
-    .transparent_experience,
-    .transparent_project
-    {
-        background-color: rgba(255, 255, 255, 0.445);
-        display: block;
-    }
-
-    .container--rigth-main_experience_flex_active > div > .transparent_experience
-    {
-        font-size: 0.8em;
-    }
 }
 
 
-@media (min-width: 751px) and (max-width: 930px) 
+@media (min-width: 900px) and (max-width: 930px) 
 {
     /* ====================================LEFT================================= */
     .container--left
@@ -271,6 +255,18 @@
 
 @media (min-width: 930px) and (max-width: 1550px) 
 {
+
+    .container--left
+    {
+        width: 15em ;
+    }
+
+    .container--rigth
+    {
+        /* width: 100vw; */
+        margin-left:15em;
+    }
+
     .container--rigth-main_presentation,
     .container--rigth-main_experience_flex
     {
