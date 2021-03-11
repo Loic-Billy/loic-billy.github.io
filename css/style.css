@@ -195,6 +195,8 @@ h4,
     text-decoration: none;
     margin-top: 0.5em;
     padding: 0.5em;
+    transition:0.6s;
+
 }
 .container--left-nav-list > a:hover
 {
@@ -253,6 +255,7 @@ h4,
     border-radius: 0.5em;
     color:rgb(32, 104, 197);
     padding: 0.5em;
+    transition:1s;
 }
 .cv:hover
 {
@@ -432,8 +435,8 @@ h5,
       background-size: cover!important;
       background-position: center!important;
       height: 100%;
-      background-color: rgb(33, 60, 95);
-      border: 1px solid rgba(26, 88, 156, 0.9);
+      background-color:rgb(34, 34, 34) ;
+      border: 3px solid rgba(26, 88, 156, 0.9);
       border-radius: 1em;
   }
 
@@ -450,17 +453,16 @@ h5,
     transform: rotateY(-180deg);
   }
   .back > p{
-    text-align: center;
-    margin:1em 1em;
+    margin:1em 2em;
   }
   .back > ul{
-    /* text-align: center; */
+    text-align: center;
     margin-top:0.5em;
-    margin-left: 4em;
   }
 
   .technoTitle {
     margin-top:1.5em;
+    margin-left: 2em;
   }
 
   .card_flip:hover .front{
@@ -482,6 +484,7 @@ h5,
 }
 
 .enDev{
+  width: 100%;
   text-align: center;
   font-size: 2em;
   color:rgb(180, 1, 1);
@@ -489,6 +492,7 @@ h5,
   bottom:1.2em;
 }
 .card-flip-button {
+  padding-top: 0.2em;
   text-align: center;
   font-weight: bold;
   color: rgb(26, 89, 156);
@@ -500,6 +504,14 @@ h5,
   bottom:0em;
   height: 2em;
   width: 100%;
+  transition: 1s;
+}
+
+.card-flip-button:hover {
+  transition: 1s;
+  color:#fff;
+  box-shadow: inset 0px 0px 10px 8px #282c34;
+  background-color: rgb(26, 89, 156);
 }
   
 /* ================================modif scrollbar=========================== */
