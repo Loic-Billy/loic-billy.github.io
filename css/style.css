@@ -363,19 +363,8 @@ justify-content: space-between;
 
 .display_experience
 {
+    margin: auto;
     width: 70vw;
-}
-
-.display_experience > div
-{
-    margin-left: 5em;
-}
-
-h5,
-.display_experience_ul
-{
-    position: relative;
-    left:2em;
 }
 
 .display_experience_ul > li

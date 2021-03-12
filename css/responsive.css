@@ -1,3 +1,4 @@
+
 @media (max-width: 900px) 
 {
 
@@ -140,7 +141,7 @@
     {
         width: 20em;
         height: 15em;
-        margin:0 auto;
+        margin:0.2em auto;
         border-radius: 1em;
        background-color: #fff;
        background-position: center;
@@ -158,6 +159,8 @@
     
     .display_experience
     {
+        width: 90%;
+        margin: auto;
         padding-bottom: 1em;
     }
 
@@ -178,7 +181,33 @@
 }
 
 
-@media (min-width: 900px) and (max-width: 930px) 
+@media (max-width: 400px) 
+{
+    .container--rigth-main_experience_flex_active > li
+    {
+        width: 7em;
+        height: 6em;
+        border-radius: 0.7em;
+    }
+
+    .container--rigth-main_experience_flex_active > li > .main_experience_div
+    {
+        font-size: 0.7em;
+    }
+    .display_experience
+    {
+        text-align: center;
+    }
+}
+@media (max-width: 751px) 
+{
+    .container--rigth-main_experience_flex  > li 
+    {
+        width: 18em;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 930px) 
 {
     /* ====================================LEFT================================= */
     .container--left
