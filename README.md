@@ -6,7 +6,12 @@ Pour la création de mon portfolio j'ai procédé par étape.
 conception d'un wireframe : https://whimsical.com/mon-portfolio-WPLfDFxqe4PBsCdLpqCwkQ
 
 ## Etape 2
-définir le thème et les couleur
+définir le thème, les couleurs et les technologies
+### téchnologie utilisés
+
+- HTML
+- CSS
+- JS
 
 ## Etape 3
 ajouter le contenue
@@ -18,8 +23,4 @@ ajout des animations
 correction / amélioration du rendu
 
 
-## téchnologie utilisés
 
-- HTML
-- CSS
-- JS
