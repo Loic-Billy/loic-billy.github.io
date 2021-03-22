@@ -17,7 +17,7 @@ définir le thème, les couleurs et les technologies
 ajouter le contenue
 
 ## Etape 4
-ajout des animations
+création des animations
 
 ## Etape 5
 correction / amélioration du rendu
