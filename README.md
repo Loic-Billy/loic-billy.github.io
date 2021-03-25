@@ -7,11 +7,11 @@ conception d'un wireframe : https://whimsical.com/mon-portfolio-WPLfDFxqe4PBsCdL
 
 ## Etape 2
 définir le thème, les couleurs et les technologies
-### téchnologie utilisés
+- ### Téchnologie utilisés
 
-- HTML
-- CSS
-- JS
+    - HTML
+    - CSS
+    - JS
 
 ## Etape 3
 ajouter le contenue
