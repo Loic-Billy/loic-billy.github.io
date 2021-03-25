@@ -50,11 +50,9 @@ const app = {
         let parentClasse = currentDiv.parentNode;
 
        app.changeTextExperienceTransparent(currentDiv);
-
         
         if(app.lastDiv === currentDiv)
         {
-
             if(parentClasse.className === "container--rigth-main_experience_flex_active")
             {
             parentClasse.className = "container--rigth-main_experience_flex";
@@ -67,7 +65,6 @@ const app = {
         }
         else 
         {
-
             if(parentClasse.className === "container--rigth-main_experience_flex_active" && app.lastDiv != currentDiv)
             {
                 app.lastDiv = currentDiv;
@@ -78,7 +75,6 @@ const app = {
             {
                 if(parentClasse.className === "container--rigth-main_experience_flex")
                 {
-                
                 parentClasse.className = "container--rigth-main_experience_flex_active";
                 parentClasse.className.transitionDelay = "1s";
 
@@ -93,9 +89,7 @@ const app = {
                 app.displayInfoForCurrentDiv(currentDiv.id);
                 }
             }
-            
         }
-
     },
 
     displayInfoForCurrentDiv: function(regex){
